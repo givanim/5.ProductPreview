@@ -8,7 +8,6 @@
 
 // ### Font
 
-
 // - Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
 // - Weights: 500, 700
 
@@ -49,16 +48,19 @@ body {
 
 
 article {
-  margin: 28px 18px;
+  margin: 25px 18px;
   background-color: $White;
   border-radius: 1em;
   overflow: hidden; // Ensures the image respects the border-radius
 }
 
 .image-container {
-  width: 100%; /* Set the desired width */
-  height: 270px; /* Set the desired height */
-  overflow: hidden; /* Ensures the image doesn't overflow the container */
+  width: 100%;
+  /* Set the desired width */
+  height: 255px;
+  /* Set the desired height */
+  overflow: hidden;
+  /* Ensures the image doesn't overflow the container */
 }
 
 //IMG reset
@@ -68,16 +70,83 @@ img {
   object-fit: cover;
 }
 
+section {
+  padding: 1.1rem;
+}
+
+.product-type {
+  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 0.30985915492957744rem + 1.8779342723004695vw, 2rem);
+  color: $Grey;
+  letter-spacing: 5px;
+}
+
 h1 {
   font-family: 'Fraunces', serif;
-  font-size: clamp(2rem, 0.7179487179487178rem + 5.47008547008547vw, 4rem);
-
+  font-weight: 700;
+  font-size: 2rem;
+  font-size: clamp(2rem, 0.6549295774647887rem + 0.9389671361502347vw, 1.5rem);
   // ALTERNATIVE METHOD 
   // @media (min-width: 375px) {
   //   font-size: $h1-font-size * 1.1;
   // }
-
   // @media (min-width: 960px) {
   //   font-size: $h1-font-size * 1.2;
   // }
+  line-height: 1;
+  margin: 8px 0;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 0.6549295774647887rem + 0.9389671361502347vw, 1.5rem);
+  font-weight: 500;
+  color: $Grey;
+  margin: 15px 0;
+}
+
+.price-section {
+  margin: 15px 0;
+}
+
+.price {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  font-size: clamp(2em, 0.6549295774647887rem + 0.9389671361502347vw, 1.5rem);
+  color: $Green500;
+}
+
+.discount {
+  font-weight: 500;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 0.6549295774647887rem + 0.9389671361502347vw, 1.5rem);
+  color: $Grey;
+  margin-left: 13px;
+  height: 100%;
+  vertical-align:super;
+}
+
+button {
+  width: 100%;
+  height: 2.9rem;
+  background-color: $Green500;
+  color: $White;
+  font-family: 'Montserrat', serif;
+  font-weight: 500;
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.6549295774647887rem + 0.9389671361502347vw, 1.5rem);
+  border-radius: 0.5em;
+  border: none;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-bottom: 7px;
+}
+
+.cart-icon {
+  height: 40%;
+  margin-right: 7px;
+  vertical-align: -2px;
+  line-height: 1;
 }
