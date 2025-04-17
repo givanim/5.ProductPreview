@@ -23,6 +23,8 @@ body {
   background-color: hsl(30, 38%, 92%);
   min-width: 375px;
   height: auto;
+  display: grid; /* Enable Grid */
+  place-items: center;
 }
 @media (width > 600px) {
   body {
@@ -39,6 +41,7 @@ article {
   background-color: hsl(0, 0%, 100%);
   border-radius: 1em;
   overflow: hidden;
+  max-width: 400px;
 }
 @media (width > 600px) {
   article {
@@ -48,6 +51,7 @@ article {
     height: fit-content;
     margin: 0 auto;
     border-radius: 0.5em;
+    max-width: 600px;
   }
 }
 
