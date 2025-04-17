@@ -144,6 +144,11 @@ button {
   vertical-align: middle;
   margin-bottom: 7px;
 }
+button:active {
+  background-color: hsl(158, 42%, 18%); /* Change background color on hover */
+  color: hsl(0, 0%, 100%); /* Optional: Change text color */
+  transition: all 0.1s ease; /* Smooth transition for hover effects */
+}
 
 .cart-icon {
   height: 40%;

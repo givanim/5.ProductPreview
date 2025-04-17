@@ -178,6 +178,14 @@ button {
   cursor: pointer;
   vertical-align: middle;
   margin-bottom: 7px;
+
+  &:active {
+    background-color: $Green700; /* Change background color on hover */
+    color: $White; /* Optional: Change text color */
+
+    transition: all 0.1s ease; /* Smooth transition for hover effects */
+  }
+
 }
 
 .cart-icon {
