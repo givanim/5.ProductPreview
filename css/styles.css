@@ -24,6 +24,14 @@ body {
   min-width: 375px;
   height: auto;
 }
+@media (width > 600px) {
+  body {
+    height: 100vh;
+    display: grid; /* Enable Grid */
+    place-items: center; /* Center content both horizontally and vertically */
+    margin: 0;
+  }
+}
 
 article {
   margin: 25px 18px;
@@ -31,14 +39,26 @@ article {
   border-radius: 1em;
   overflow: hidden;
 }
+@media (width > 600px) {
+  article {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
 
 .image-container {
   width: 100%;
-  /* Set the desired width */
   height: 255px;
-  /* Set the desired height */
   overflow: hidden;
-  /* Ensures the image doesn't overflow the container */
+}
+@media (width > 600px) {
+  .image-container {
+    width: 686px;
+    height: 100%;
+  }
 }
 
 img {
@@ -50,10 +70,14 @@ img {
 section {
   padding: 1.1rem;
 }
+@media (width > 600px) {
+  section {
+    width: 400px;
+  }
+}
 
 .product-type {
   font-size: 0.75rem;
-  font-size: clamp(0.75rem, 0.3098591549rem + 1.8779342723vw, 2rem);
   color: hsl(228, 12%, 48%);
   letter-spacing: 5px;
 }
@@ -62,14 +86,12 @@ h1 {
   font-family: "Fraunces", serif;
   font-weight: 700;
   font-size: 2rem;
-  font-size: clamp(2rem, 0.6549295775rem + 0.9389671362vw, 1.5rem);
   line-height: 1;
   margin: 8px 0;
 }
 
 .product-description {
   font-size: 0.9rem;
-  font-size: clamp(0.9rem, 0.6549295775rem + 0.9389671362vw, 1.5rem);
   font-weight: 500;
   color: hsl(228, 12%, 48%);
   margin: 15px 0;
@@ -83,7 +105,6 @@ h1 {
   font-family: "Fraunces", serif;
   font-weight: 700;
   font-size: 2rem;
-  font-size: clamp(2em, 0.6549295775rem + 0.9389671362vw, 1.5rem);
   color: hsl(158, 36%, 37%);
 }
 
@@ -91,7 +112,6 @@ h1 {
   font-weight: 500;
   display: inline-block;
   font-size: 0.8rem;
-  font-size: clamp(0.8rem, 0.6549295775rem + 0.9389671362vw, 1.5rem);
   color: hsl(228, 12%, 48%);
   margin-left: 13px;
   height: 100%;
@@ -106,7 +126,6 @@ button {
   font-family: "Montserrat", serif;
   font-weight: 500;
   font-size: 1rem;
-  font-size: clamp(1rem, 0.6549295775rem + 0.9389671362vw, 1.5rem);
   border-radius: 0.5em;
   border: none;
   cursor: pointer;

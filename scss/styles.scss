@@ -46,6 +46,12 @@ body {
   background-color: $Cream;
   min-width: 375px;
   height: auto;
+  @media (width > 600px) {
+    height: 100vh;
+    display: grid; /* Enable Grid */
+    place-items: center; /* Center content both horizontally and vertically */
+    margin: 0;
+  }
 }
 
 
@@ -54,15 +60,25 @@ article {
   background-color: $White;
   border-radius: 1em;
   overflow: hidden; // Ensures the image respects the border-radius
+
+  @media (width > 600px) {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    height: 100%;
+    margin: 0 auto;
+  }
 }
 
 .image-container {
   width: 100%;
-  /* Set the desired width */
   height: 255px;
-  /* Set the desired height */
   overflow: hidden;
-  /* Ensures the image doesn't overflow the container */
+  @media (width > 600px) {
+    width: 686px;
+    height: 100%;
+  }
+
 }
 
 //IMG reset
@@ -74,11 +90,14 @@ img {
 
 section {
   padding: 1.1rem;
+  @media (width > 600px) {
+    width: 400px;
+  }
 }
 
 .product-type {
   font-size: 0.75rem;
-  font-size: clamp(0.75rem, 0.30985915492957744rem + 1.8779342723004695vw, 2rem);
+  // font-size: clamp(0.75rem, 0.30985915492957744rem + 1.8779342723004695vw, 2rem);
   color: $Grey;
   letter-spacing: 5px;
 }
@@ -87,8 +106,8 @@ h1 {
   font-family: 'Fraunces', serif;
   font-weight: 700;
   font-size: 2rem;
-  font-size: clamp(2rem, 0.6549295774647887rem + 0.9389671361502347vw, 1.5rem);
-  // ALTERNATIVE METHOD 
+  // font-size: clamp(2rem, 0.6549295774647887rem + 0.9389671361502347vw, 1.5rem);
+  // ALTERNATIVE METHOD
   // @media (min-width: 375px) {
   //   font-size: $h1-font-size * 1.1;
   // }
@@ -101,7 +120,7 @@ h1 {
 
 .product-description {
   font-size: 0.9rem;
-  font-size: clamp(0.9rem, 0.6549295774647887rem + 0.9389671361502347vw, 1.5rem);
+  // font-size: clamp(0.9rem, 0.6549295774647887rem + 0.9389671361502347vw, 1.5rem);
   font-weight: 500;
   color: $Grey;
   margin: 15px 0;
@@ -115,7 +134,7 @@ h1 {
   font-family: 'Fraunces', serif;
   font-weight: 700;
   font-size: 2rem;
-  font-size: clamp(2em, 0.6549295774647887rem + 0.9389671361502347vw, 1.5rem);
+  // font-size: clamp(2em, 0.6549295774647887rem + 0.9389671361502347vw, 1.5rem);
   color: $Green500;
 }
 
@@ -123,11 +142,11 @@ h1 {
   font-weight: 500;
   display: inline-block;
   font-size: 0.8rem;
-  font-size: clamp(0.8rem, 0.6549295774647887rem + 0.9389671361502347vw, 1.5rem);
+  // font-size: clamp(0.8rem, 0.6549295774647887rem + 0.9389671361502347vw, 1.5rem);
   color: $Grey;
   margin-left: 13px;
   height: 100%;
-  vertical-align:super;
+  vertical-align: super;
 }
 
 button {
@@ -138,7 +157,7 @@ button {
   font-family: 'Montserrat', serif;
   font-weight: 500;
   font-size: 1rem;
-  font-size: clamp(1rem, 0.6549295774647887rem + 0.9389671361502347vw, 1.5rem);
+  // font-size: clamp(1rem, 0.6549295774647887rem + 0.9389671361502347vw, 1.5rem);
   border-radius: 0.5em;
   border: none;
   cursor: pointer;
